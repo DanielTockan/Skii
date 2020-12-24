@@ -1,4 +1,4 @@
-# Skii Resorts lets see if this works
+# Skii Resorts
 
 ## Overview
 
