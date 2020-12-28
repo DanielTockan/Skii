@@ -39,3 +39,37 @@ password: admin
 <!-- - Use a framework for responsiveness.
 - Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
 - Use best practices for writing code, such as semantic markup. -->
+
+## Technologies Used
+
+### Back-end:
+
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Bcrypt
+- JSON Web Token
+- Body Parser
+
+### Front-end:
+
+- HTML
+- CSS
+- Bootstrap framework
+- JavaScript
+- React
+- Axios
+- Cloudinary
+- React Mapbox GL
+- External Weather API
+
+### Development tools:
+
+- VS Code
+- Git
+- GitHub
+- NPM
+- Insomnia
+- Chrome Dev Tools
+- Heroku
