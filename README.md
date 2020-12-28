@@ -24,5 +24,5 @@ Many external libraries wwere used to enhance the user experience on the client-
 
 To enjoy the full experience of the applications, you can register using the credentials of your choice or alternatively use the following:
 
-email: admin@admin.com
+email: admin@admin.com <br>
 password: admin
