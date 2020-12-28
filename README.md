@@ -1,4 +1,4 @@
-# Skii App
+# Skii App (SEI Project 3)
 
 ### Table of contents
 
@@ -26,3 +26,16 @@ To enjoy the full experience of the application, you can register using the cred
 
 email: admin@admin.com <br>
 password: admin
+
+## The Brief
+
+- Build a full-stack MERN web application
+- Use an Express API to serve your data from a Mongo database
+- Consume your API with a separate front-end built with React
+- Be a complete product which means multiple relationships and CRUD functionality for the relevent models
+- Implement thoughtful user stories/wireframes, significant enough to clearly determine which features are core MVP and which are stretch goals
+- Be deployed online using Heroku and MongoDB Atlas database
+
+<!-- - Use a framework for responsiveness.
+- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
+- Use best practices for writing code, such as semantic markup. -->
