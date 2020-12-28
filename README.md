@@ -20,7 +20,7 @@ Given that this was a larger group project consisting of 4 people, Git and GitHu
 
 Many external libraries wwere used to enhance the user experience on the client-side throughout the application. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
-## Click here to [Skii](https://lets-skii.herokuapp.com/) with us
+### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
 [CHECK IT OUT HERE](https://skiresorts.herokuapp.com/)
 
