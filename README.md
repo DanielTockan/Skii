@@ -22,9 +22,9 @@ Many external libraries wwere used to enhance the user experience on the client-
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
-To enjoy the full experience of the applications, you can register using the credentials of your choice or alternatively use the following:
+To enjoy the full experience of the application, you can register using the credentials of your choice or alternatively use the following:
 
-email: admin@admin.com
+email: admin@admin.com <br>
 password: admin
 
 [CHECK IT OUT HERE](https://skiresorts.herokuapp.com/)
