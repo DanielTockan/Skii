@@ -40,28 +40,40 @@ password: admin
 - Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
 - Use best practices for writing code, such as semantic markup. -->
 
-## Technologies used:
+## Technologies Used
 
-- HTML5
+### Back-end:
+
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Bcrypt
+- JSON Web Token
+- Body Parser
+
+### Front-end:
+
+- HTML
 - CSS
-- JavaScript ES6
+- Bootstrap framework
+- JavaScript
+- React
+- Axios
+- Cloudinary
+- React Mapbox GL
+- External Weather API
+
+### Development tools:
+
+- VS Code
 - Git
 - GitHub
-- Mongoose
-- MongoDB
-- Express
-- React
-- Node
-- Bootstrap framework
-- Cloudinary
-- Axios
-- Bcrypt
-- Json Web Token
-- React native maps
-- React Hooks
-- Font Awesome
-- React Reveal
-- External weather API
+- NPM
+- Insomnia
+- Chrome Dev Tools
+- Heroku
+
 
 ## Approach
 
