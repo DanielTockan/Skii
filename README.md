@@ -1,5 +1,7 @@
 # Skii App (SEI Project 3)
 
+![Ski Resorts](./resources/screenshots/landing_page.png)
+
 ### Table of contents
 
 - Project Overview
@@ -14,7 +16,7 @@
 
 ## Overview
 
-Skii is a global ski resort application that allows members to be part of an interactive, online community where information on the major ski resorts across the world are shared. This week-long project expanded on the frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and mongoose. 
+Skii is a global ski resort application that allows members to be part of an interactive, online community where information on the major ski resorts across the world are shared. This week-long project expanded on the frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose. 
 
 Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the backend of the project, I contributed to all aspects but was heavily involved in the user level and object level authentication used for onbaording on logging in, as well as the design of the router and user controllers.
 
