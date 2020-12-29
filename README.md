@@ -34,7 +34,9 @@ password: admin
 - Consume your API with a separate front-end built with React
 - Be a complete product which means multiple relationships and CRUD functionality for the relevent models
 - Implement thoughtful user stories/wireframes, significant enough to clearly determine which features are core MVP and which are stretch goals
-- Be deployed online using Heroku and MongoDB Atlas database
+- Be deployed online so its accessible publicly (using Heroku and MongoDB Atlas database)
+- Have a visually impressive design
+- Timeframe: 8 days
 
 <!-- - Use a framework for responsiveness.
 - Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
@@ -76,6 +78,8 @@ password: admin
 
 
 ## Approach
+
+Once the Ski resort concept for the project was established and fully fleshed out
 
 We decided to construct a ski resorts website where the resorts were displayed using React native maps, and the user could check out information on each resort and interact with it such as add a star rating, post comments and add a resort to their favourites. Current weather conditions must be shown for each resort. An account section would let the user change the personal information and upload an avatar.
 
