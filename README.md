@@ -93,4 +93,4 @@ This thorough approach that we took to planning was vital in ensuring that all g
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-As a group, we opted to use an agile framework to monitor and control out work and progress. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+As a group, we opted to use an agile framework to monitor and control our work and progress. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
