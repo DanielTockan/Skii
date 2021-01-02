@@ -89,4 +89,4 @@ Once the Ski resort concept for the project was established a lot of focus was p
 - What the stretch goals for the project were, and thinking ahead particular about how the models would be impacted to support those
 - What external libraries would be implemented
 
-This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete gave us a baseline to track progress against.
+This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete gave us a baseline to track progress against. Most importantly, it made writing our code much simpler as less changes and amendments were needed necessary.
