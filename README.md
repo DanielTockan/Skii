@@ -95,6 +95,12 @@ This thorough approach that we took to planning was vital in ensuring that all g
 
 As a group, we opted to use an agile framework to monitor and control our work and progress. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
+### Back-end:
+
+### Front-end:
+
+
+
 
 We decided to construct a ski resorts website where the resorts were displayed using React native maps, and the user could check out information on each resort and interact with it such as add a star rating, post comments and add a resort to their favourites. Current weather conditions must be shown for each resort. An account section would let the user change the personal information and upload an avatar.
 
