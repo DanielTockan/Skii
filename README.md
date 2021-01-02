@@ -16,11 +16,11 @@
 
 ## Overview
 
-Skii is a global ski resort application that allows members to be part of an interactive, online community where information on the major ski resorts across the world are shared. This week-long project expanded on the frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose. 
+Skii is a global ski resort application that allows members to be part of an interactive, online community where information thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on the frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose. 
 
 Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the backend of the project, I contributed to all aspects but was heavily involved in the user level and object level authentication used for onbaording on logging in, as well as the design of the router and user controllers.
 
-Many external libraries wwere used to enhance the user experience on the client-side throughout the application. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
+Many external libraries were used to enhance the user experience on the client-side throughout the application. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
@@ -81,4 +81,12 @@ password: admin
 
 ## Approach
 
-Once the Ski resort concept for the project was established and fully fleshed out
+Once the Ski resort concept for the project was established a lot of focus was put into the planning of
+- What the models look like, and the relationships between them
+- What controllers and routes were required
+- Where the data would be retrieved from (external API's, manually creating it, or some combination etc.)
+- What pages were needed on the frontend, and how they would interact with the API
+- What the stretch goals for the project were, and thinking ahead particular about how the models would be impacted to support those
+- What external libraries would be implemented
+
+This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete gave us a baseline to track progress against.
