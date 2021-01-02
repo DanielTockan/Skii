@@ -90,3 +90,5 @@ Once the Ski resort concept for the project was established a lot of focus was p
 - What external libraries would be implemented
 
 This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete gave us a baseline to track progress against. Most importantly, it made writing our code much simpler as less changes and amendments were needed necessary.
+
+![Plan](./resources/screenshots/plan_to_production.png)
