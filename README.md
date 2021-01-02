@@ -91,6 +91,8 @@ Once the Ski resort concept for the project was established a lot of focus was p
 
 This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete gave us a baseline to track progress against. Most importantly, it made writing our code much simpler as less changes and amendments were needed necessary.
 
+![Plan](./resources/screenshots/plan_to_production.png)
+
 
 
 We decided to construct a ski resorts website where the resorts were displayed using React native maps, and the user could check out information on each resort and interact with it such as add a star rating, post comments and add a resort to their favourites. Current weather conditions must be shown for each resort. An account section would let the user change the personal information and upload an avatar.
