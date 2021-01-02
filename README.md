@@ -92,3 +92,5 @@ Once the Ski resort concept for the project was established a lot of focus was p
 This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less changes and amendments were needed necessary.
 
 ![Plan](./resources/screenshots/plan_to_production.png)
+
+As a group, we opted to use an agile framework to monitor and control out work and progress. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
