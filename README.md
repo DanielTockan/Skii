@@ -127,7 +127,6 @@ const resortsSchema = new mongoose.Schema({
 
 As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. 
 
-
 The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
 
 The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). WHY DID THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD??. The comment model had a user reference relationship of its own in order to assign a user to the comment they made. Timestamp field was added also.
@@ -149,9 +148,7 @@ The planning phase of the project enabled me to determine the correct relationsh
 
 CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
 
-<br>
-
-Special considerations had to be made for scenarios where only logged in users, or the user assosciated with particular aspect of the app, be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+Considerations were made for scenarios where only logged in users, or the user assosciated with particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
 
 ```js
 function modifyUser(req, res) {
