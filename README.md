@@ -8,6 +8,8 @@
 - The Brief
 - Technologies Used
 - Approach Taken
+  - Back-end
+  - Front-end
 - Final Product
 - Wins & Blockers
 - Bugs
@@ -186,6 +188,8 @@ Before proceeding to the front-end build, all controllers were tested on the bac
 Making reference to the "modifyUser" function once again, the following test was carried out to ensure the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
+
+#### Middleware
 
 
 ### Front-end:
