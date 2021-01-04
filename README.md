@@ -127,7 +127,6 @@ const resortsSchema = new mongoose.Schema({
 
 As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. 
 
-<br>
 
 The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
 
