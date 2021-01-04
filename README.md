@@ -97,6 +97,32 @@ As a group, we opted to use an agile framework to monitor and control our work a
 
 ### Back-end:
 
-The first step taken was to create the models for the app. It was determined that only 2 models were necessary. Using Mongoose, I created the 
+The first step taken was to create the models for the app. It was determined that only 2 models were necessary. Using Mongoose, they were created based off of the notes from the plan created initially.
+
+#### Resorts Model
+
+```js
+const resortsSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  country: { type: String, required: true },
+  top_elevation: { type: Number, required: true },
+  bottom_elevation: { type: Number, required: true },
+  lon: { type: Number, required: true },
+  lat: { type: Number, required: true },
+  image: { type: String, required: true },
+  comments: [commentSchema],
+  description: { type: String },
+  skilifts: { type: String },
+  openingtimes: { type: String },
+  slopeslength: { type: String },
+  adultticket: { type: String },
+  childticket: { type: String },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  userRating: { type: Number, required: true },
+  numOfRatings: { type: Number, required: true }
+})
+```
+
+As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. The comments field had an embedded relationship, whereas the user field used a referenced relationship. STATE THE LOGIC AND REASONING BEHIND THIS. The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
 
 ### Front-end:
