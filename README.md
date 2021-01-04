@@ -181,8 +181,6 @@ The two "if" statements within the above function handled the USER/OBJECT (WHICH
 
 Before proceeding to the front-end build, all controllers were tested on the back-end using insomnia. This was a paired excercise carried out by myself and Kasjan.
 
-<br>
-
 Making reference to the "modifyUser" function once again, the following test was carried out to ensure the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
