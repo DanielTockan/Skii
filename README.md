@@ -123,6 +123,23 @@ const resortsSchema = new mongoose.Schema({
 })
 ```
 
-As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. The comments field had an embedded relationship, whereas the user field used a referenced relationship. STATE THE LOGIC AND REASONING BEHIND THIS AND WHY THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD. The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
+As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS)
+
+<br>
+
+The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). WHY DID THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD??. The comment model had a user reference relationship of its own in order to assign a user to the comment they made. Timestamp field was added also.
+
+```js
+const commentSchema = new mongoose.Schema({
+
+  text: { type: String, required: true },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+
+}, {
+  timestamps: true
+})
+```
+
+The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
 
 ### Front-end:
