@@ -18,15 +18,15 @@
 
 ## Overview
 
-Skii is a global ski resort application that allows members to be part of an interactive, online community where information thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on the frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose. 
+Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. 
 
-Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the backend of the project, I contributed to all aspects but was heavily involved in the user level and object level authentication used for onbaording on logging in, as well as the design of the router and user controllers.
+Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the backend of the project, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onbaording on logging in. I also  designed the router and user controllers.
 
-Many external libraries were used to enhance the user experience on the client-side throughout the application. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
+Many external libraries were used to enhance the user experience on the client-side throughout the app. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
-To enjoy the full experience of the application, you can register using the credentials of your choice or alternatively use the following:
+To enjoy the full experience, you can register using the credentials of your choice or alternatively use the following:
 
 email: admin@admin.com <br>
 password: admin
@@ -40,7 +40,7 @@ password: admin
 - Implement thoughtful user stories/wireframes, significant enough to clearly determine which features are core MVP and which are stretch goals
 - Be deployed online so its accessible publicly (using Heroku and MongoDB Atlas database)
 - Have a visually impressive design
-- Timeframe: 8 days
+- Timeframe: 1 week
 
 <!-- - Use a framework for responsiveness.
 - Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
@@ -83,25 +83,29 @@ password: admin
 
 ## Approach
 
-Once the Ski resort concept for the project was established a lot of focus was put into the planning of
+Once the Ski resort concept for the project was established a lot of focus was put into the planning of:
 - What the models look like, and the relationships between them
 - What controllers and routes were required
 - Where the data would be retrieved from (external API's, manually creating it, or some combination etc.)
 - What pages were needed on the frontend, and how they would interact with the API
-- What the stretch goals for the project were, and thinking ahead particular about how the models would be impacted to support those
+- What the stretch goals for the project were, and thinking ahead particularly about how the models would be impacted to support those
 - What external libraries would be implemented
 
-This thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less changes and amendments were needed necessary.
+The thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-As a group, we opted to use an agile framework to monitor and control our work and progress. We used Kanban for this, with the help of a Trello board. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+I took charge of the project management aspects for Skii. As a group, we opted to use an agile framework to monitor and control our work and progress. We used Kanban for this, with the help of a Trello board. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+
+<br>
 
 ### Back-end:
 
-The first step taken was to create the models for the app. It was determined that 3 models were necessary. Using Mongoose, they were created based off of the notes from the plan created initially.
+The first step taken was to create the schemata for the app. Based off of the notes from the plan created initially, we created three, one for the resorts, users and comments.
 
-#### Models
+<br>
+
+#### Schemata
 
 ```js
 const resortsSchema = new mongoose.Schema({
@@ -125,11 +129,11 @@ const resortsSchema = new mongoose.Schema({
 })
 ```
 
-As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. 
+As can be seen above, the resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
 The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
 
-The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). WHY DID THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD??. The comment model had a user reference relationship of its own in order to assign a user to the comment they made. Timestamp field was added also.
+The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). WHY DID THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD??. The comment schema had a user reference relationship of its own in order to assign a user to the comment they made.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -141,14 +145,15 @@ const commentSchema = new mongoose.Schema({
   timestamps: true
 })
 ```
-
 The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
+
+<br>
 
 #### Controllers
 
 CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
 
-Considerations were made for scenarios where only logged in users, or the user assosciated with particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+Considerations were made for scenarios where only logged in users, or the user assosciated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
 
 ```js
 function modifyUser(req, res) {
@@ -176,12 +181,12 @@ function modifyUser(req, res) {
 ```
 
 The two "if" statements within the above function handled the USER/OBJECT (WHICH ONE??) level permission in this regard. 
-- The former checks whether a valid user is logged in to begin with. If not, an error message appears blocking entry. 
-- The latter checking whether the user ID asscosciated with the logged in user matches that of the user that they are trying to edit. If not, again, an error message blocking entry appears.
+- The former checks whether a valid user is logged in to begin with. If not, an error message appears blocking entry 
+- The latter checks whether the user ID asscosciated with the user logged in, matches that of the user that they are trying to edit. If not, again, an error message blocking entry appears
 
-Before proceeding to the front-end build, all controllers were tested on the back-end using insomnia. This was a paired excercise carried out by myself and Kasjan.
+Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired excercise carried out by Kasjan and myself.
 
-Making reference to the "modifyUser" function once again, the following test was carried out to ensure the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
+Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
 
