@@ -99,7 +99,7 @@ As a group, we opted to use an agile framework to monitor and control our work a
 
 The first step taken was to create the models for the app. It was determined that 3 models were necessary. Using Mongoose, they were created based off of the notes from the plan created initially.
 
-#### Resorts Model
+#### Models
 
 ```js
 const resortsSchema = new mongoose.Schema({
@@ -141,6 +141,50 @@ const commentSchema = new mongoose.Schema({
 ```
 
 The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
+
+#### Controllers
+
+CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
+
+<br>
+
+Special considerations had to be made for scenarios where only logged in users, or the user assosciated with particular aspect of the app, be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+
+```js
+function modifyUser(req, res) {
+  const accountId = req.params
+  const finalId = accountId.accountId
+  const body = req.body
+
+  const currentUser = req.currentUser
+
+  User
+    .findById(finalId)
+    .then(account => {
+      if (!account) return res.send({ message: 'No user by this name' })
+      if (!account._id.equals(currentUser._id)) {
+        return res.status(401).send({ message: 'Unauthorised' })
+      }
+      account.set(body)
+      console.log(body)
+
+      return account.save()
+    })
+    .then(account => res.send(account))
+    .catch(error => res.send(error))
+}
+```
+
+The two "if" statements within the above function handled the USER/OBJECT (WHICH ONE??) level permission in this regard. 
+- The former checks whether a valid user is logged in to begin with. If not, an error message appears blocking entry. 
+- The latter checking whether the user ID asscosciated with the logged in user matches that of the user that they are trying to edit. If not, again, an error message blocking entry appears.
+
+Before proceeding to the front-end build, all controllers were tested on the back-end using insomnia. This was a paired excercise carried out by myself and Kasjan.
+
+<br>
+
+Making reference to the "modifyUser" function once again, the following test was carried out to ensure the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
+
 
 ### Front-end:
 
