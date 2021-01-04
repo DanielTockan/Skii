@@ -8,17 +8,17 @@ const schema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  firstname: { type: String},
-  lastname: { type: String},
-  bio: { type: String},
+  firstname: { type: String },
+  lastname: { type: String },
+  bio: { type: String },
   image: { type: String },
   isAdmin: { type: Boolean },
   favourites: { type: Array },
-  ski_or_board: { type: String},
-  favourite_region: { type: String},
-  hometown: { type: String},
-  experience: { type: String},
-  favourite_brand: { type: String}
+  ski_or_board: { type: String },
+  favourite_region: { type: String },
+  hometown: { type: String },
+  experience: { type: String } ,
+  favourite_brand: { type: String }
   
 })
 
