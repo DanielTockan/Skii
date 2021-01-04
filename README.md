@@ -97,7 +97,7 @@ As a group, we opted to use an agile framework to monitor and control our work a
 
 ### Back-end:
 
-The first step taken was to create the models for the app. It was determined that only 2 models were necessary. Using Mongoose, they were created based off of the notes from the plan created initially.
+The first step taken was to create the models for the app. It was determined that 3 models were necessary. Using Mongoose, they were created based off of the notes from the plan created initially.
 
 #### Resorts Model
 
