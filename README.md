@@ -140,7 +140,7 @@ const commentSchema = new mongoose.Schema({
 })
 ```
 
-The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
+The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
 
 ### Front-end:
 
