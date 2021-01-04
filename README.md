@@ -123,6 +123,6 @@ const resortsSchema = new mongoose.Schema({
 })
 ```
 
-As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. The comments field had an embedded relationship, whereas the user field used a referenced relationship. STATE THE LOGIC AND REASONING BEHIND THIS. The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
+As can be seen above, the resorts model had two fields that required different types of relationships in order to get our desired functionality. The comments field had an embedded relationship, whereas the user field used a referenced relationship. STATE THE LOGIC AND REASONING BEHIND THIS AND WHY THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD. The planning phase of the project enabled me to determine the correct relationship type from the offset meaning that no retrospective changes were necessary.
 
 ### Front-end:
