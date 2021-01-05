@@ -423,6 +423,21 @@ function handleImageUpload(event) {
 
 ## Triumphs
 
+- Excellent Team work.
+- No major issues experienced using git, ie losing data or mismanaged conflicts.
+- Implemented majority of stretch goals due to smooth management of project.
+- Gained confidence using external libraries and reading documentation.
+- Learned how to use the Bootstrap framework.
+- Smooth, minimal and professional looking design was accomplished.
+
 ## Obstacles Faced and Lessons
 
+- Expereinced tremendous difficulty finding ski Resort that met our needs. We decided to build our own API instead, and pull data that we could from external API's. An approach that I will use going forward.
+- Had major issues with deployment due to caps locks in our file structure. Learned best practices for setting up file structures and how to deploy going forward.
+- General issues with debugging trickier parts of the code that take a long time to figure out. Overcoming the feeling of lost, and relying on pair-programming and mathodical approach to solving problems.
+
 ## Future Features
+
+- Ability to add resorts on the user interface.
+- Ability to send friend/follow requests to other users on the website.
+- Improvement to the responsiveness of the app in certain components.
