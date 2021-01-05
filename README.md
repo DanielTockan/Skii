@@ -353,19 +353,22 @@ Clicking on any of these resorts linked you to the individual page for the resor
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
-useState and external weather API were used to obtain the current weather forecasts for the next 7 days:
+- useState
 
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
 ```
+- An external weather API were used to obtain the current weather forecasts for the next 7 days:
 
 ```js
-<h6>Current temperature: {(weather.current.temp - 273) | 0}°C {weather.current.weather[0].description}</h6>
-  <div className="container">
-    <div className="row weather-days">
-      {weather.daily.map(day => {
-        return <div className="col" key={day.dt}><p>{(day.temp.max - 273) | 0}°C</p> <p>{(day.temp.min - 273) | 0}°C</p> <p>{day.weather[0].main}</p></div>
-      })}
-    </div>
-  </div>
+Resorts.
+    findOne({ name: { $regex: name, $options: 'i' } } )
+    .populate('comments.user')
+    .then(resort => {
+      axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${resort.lat}&lon=${resort.lon}&exclude=hourly,minutely&appid=b12529b2552a67b6714b256d3318424c`)
+        .then(resp => {
+
+
+          res.send({ resort: resort, weather: resp.data })
+        })
 ```
