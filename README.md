@@ -2,6 +2,25 @@
 
 ![Skii](./resources/screenshots/skii.png)
 
+## Project Overview
+
+Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. 
+
+This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. 
+
+I contributed to most aspects of the front-end and back-end,but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the client-side experience throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. 
+
+Upon completion, Skii was deployed using Heroku.
+
+### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
+
+To enjoy the full experience, you can sign up using the credentials of your choice, OR alternatively use the following:
+
+email: admin@admin.com <br>
+password: admin
+
+<br>
+
 ### Table of Contents
 
 1. [Project Overview](#Project-Overview)
@@ -14,23 +33,6 @@
 5. [Triumphs](#Triumphs)
 6. [Obstacles Faced and Lessons](#Obstacles-Faced-and-Lessons)
 7. [Future Features](#Future-Features)
-
-<br>
-
-## Project Overview
-
-Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. 
-
-This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. 
-
-I contributed to all aspects of the front-end and back-end but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the user experience on the client-side throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
-
-### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
-
-To enjoy the full experience, you can register using the credentials of your choice or alternatively use the following:
-
-email: admin@admin.com <br>
-password: admin
 
 <br>
 
