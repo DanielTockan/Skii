@@ -100,13 +100,19 @@ Once the Ski resort concept was established a lot of focus was put into the plan
 - What external libraries would be implemented
 - Wireframing and decisions on the layout and design of the app were tackled after the back-end was complete
 
-The thorough approach takrn towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
+The thorough approach taken towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
 I took charge of the project management aspects for Skii. We used an agile framework to monitor and control our work and progress, specifically Kanban, with the help of a Trello board. 
 
-INSERT  TREllO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
+INSERT  TRELLO SCREENSHOTS HERE
 
 Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
@@ -138,7 +144,7 @@ const resortsSchema = new mongoose.Schema({
 })
 ```
 
-As can be seen above, the resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
+The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
 The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
 
@@ -155,7 +161,7 @@ const commentSchema = new mongoose.Schema({
 })
 ```
 
-For the user schema, we employed the use of the Bcrypt library to hash the users password as an added level of security. Our password confirmation is stored in a virtual field and is checked against tge password the user enters before validation.
+For the user schema, we employed the use of the Bcrypt library to hash the users password as an added level of security. Our password confirmation is stored in a virtual field and is checked against the password that the user enters before validation occurs.
 
 The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
 
