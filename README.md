@@ -216,7 +216,7 @@ function modifyUser(req, res) {
 }
 ```
 
-All database requests to modify user credentials passed through the router in the back-end via a PUT request. Secure route middleware was added to the route as follows:
+All database requests to modify user credentials passed through the backe-end router via a PUT request. Secure route middleware was added to the route as follows:
 
 ```js
 router.route('/users/:accountId')
@@ -225,7 +225,39 @@ router.route('/users/:accountId')
   .put(secureRoute, userController.modifyUser)
 ```
 
-The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token. JSON Web Token technology was imported to enable this.
+The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token. JSON Web Token technology was imported to enable this like so:
+
+```js
+unction secureRoute(req, res, next) {
+  const authToken = req.headers.authorization
+  console.log('in the secure route')
+  console.log(authToken)
+
+  if (!authToken || !authToken.startsWith('Bearer')) {
+    console.log('first check')
+    return res.status(401).send({ message: 'Unauthorised 1 - update and imageupload' })
+  }
+  const token = authToken.replace('Bearer ', '')
+
+  jwt.verify(token, secret, (err, payload) => {
+    if (err) return res.status(401).send({ message: 'Unauthorised 2' })
+    console.log('second check')
+
+    const userId = payload.sub
+    User
+      .findById(userId)
+      .then(user => {
+        if (!user) return res.status(401).send({ message: 'Unauthorised 3' })
+        console.log('third check')
+
+        req.currentUser = user
+
+        next()
+      })
+      .catch(()=> res.status(401).send({ message: 'Unauthorised 4' }))
+  })
+}
+```
 
 The two "if" statements within "modifyUser" function, then conducted the following checks: 
 - The latter checked whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, access to the route was blocked
