@@ -10,7 +10,6 @@
 - The Approach
   - Back-end
   - Front-end
-- Final Product
 - Triumphs
 - Obstacles Faced (and lessons!!)
 - Future Features
@@ -389,7 +388,7 @@ The most complex aspect of this page was the integration of the cloudinary widge
 
 ![Update Account](./resources/screenshots/update_account.png)
 
-This library was outside of the scope of the course, requiring me to go through the the source documentation. I produced the following fucntion that was triggered by an onClick event listener whenever the upload image button was pressed:
+This library was outside of the scope of the course, requiring me to go through the the source documentation. I produced the following function that was triggered by an onClick event listener whenever the upload image button was pressed:
 
 ```js
 function handleImageUpload(event) {
