@@ -386,3 +386,32 @@ The My Account page is the one stop shop for editing personal information, uploa
 ![My Account](./resources/screenshots/my_account.png)
 
 The most complex aspect of this page was the integration of the cloudinary widget to faciliatate the upload of new images. This was implemented fully in the update your account page: 
+
+![Update Account](./resources/screenshots/update_account.png)
+
+This library was outside of the scope of the course, requiring me to go through the the source documentation. I produced the following fucntion that was triggered by an onClick event listener whenever the upload image button was pressed:
+
+```js
+function handleImageUpload(event) {
+    event.preventDefault()
+
+    const token = localStorage.getItem('token')
+
+    window.cloudinary.createUploadWidget(
+      {
+        cloudName: 'dzt94',
+        uploadPreset: 'skiresortapp',
+        cropping: true
+      },
+      (err, result) => {
+        if (result.event !== 'success') {
+          return
+        }
+        axios.put(`/api/users/${props.match.params.id}`, { image: result.info.secure_url }, {
+          headers: { Authorization: `Bearer ${token}` }
+        })
+          .then((res) => updateFormData(res.data))
+      }
+    ).open()
+  }
+```
