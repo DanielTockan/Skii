@@ -352,14 +352,15 @@ The display was achieved by mapping the resorts from our database into cards on 
 Clicking on any of these resorts linked you to the individual page for the resort.
 
 Here, users are also able to:
-  - View informaation specific to that resort
-  - Add the resort to their favourites (displayed on their accont page)
+  - View information specific to that resort
+  - Add the resort to their favourites (displayed on My Account page)
   - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
   - Add a rating to the resort
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
 - An external weather API and useState were used to obtain and dynamically update the current weather, and forecasts for the next 7 days:
+- Similarly to the markers on the homepage, weather information was obtained using longitude and latitude co-ordinates
 
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
