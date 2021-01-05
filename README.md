@@ -349,7 +349,13 @@ The display was achieved by mapping the resorts from our database into cards on 
       })}
 ```
 
-Clicking on any of these resorts linked you to the individual page for the resort. On this page further information and fucntionality can be found.
+Clicking on any of these resorts linked you to the individual page for the resort.
+
+Users are also able to:
+  - View informaation specific to that resort
+  - Add the resort to their favourites (displayed on their accont page)
+  - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
+  - Add a rating to the resort
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
@@ -371,8 +377,3 @@ Resorts.
           res.send({ resort: resort, weather: resp.data })
         })
 ```
-
-As can be seen, users are also able to:
-  - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
-  - Add a rating to the resort
-  - Add the resort to their favourites (displayed on their accont page)
