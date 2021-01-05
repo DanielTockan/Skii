@@ -12,7 +12,7 @@
     - [Back-end](#Back-end)
     - [Front-end](#Front-end)
 5. [Triumphs](#Triumphs)
-6. [Obstacles Faced and Lessons!!](#Obstacles-Face-and-Lessons!!)
+6. [Obstacles Faced and Lessons!!](#Obstacles-Faced-and-Lessons!!)
 7. [Future Features](#Future-Features)
 
 <br>
