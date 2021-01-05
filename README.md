@@ -14,7 +14,7 @@
   - Front-end
 - Final Product
 - Trimuphs
-- Obstacles Ecountered and Lessons Learned
+- Lessons Learned
 - Future Features
 
 
