@@ -4,16 +4,15 @@
 
 ### Table of Contents
 
-- Project Overview
-- The Brief
-- Technologies Used
-- The Approach
+1. [Project Overview](#Project-Overview)
+2. [The Brief](#The-Brief)
+3. [Technologies Used](#Technologies-Used)
+4. [The Approach](#The-Approach)
   - Back-end
   - Front-end
-- Triumphs
-- Obstacles Faced (and lessons!!)
-- Future Features
-
+5. [Triumphs](#Triumphs)
+6. [Obstacles Faced (and lessons!!)](#Obstacles-Face-(and-lessons!!))
+7. [Future Features](#Future-Features)
 
 <br>
 
@@ -414,3 +413,9 @@ function handleImageUpload(event) {
     ).open()
   }
 ```
+
+## Triumphs
+
+## Obstacles Faced (and lessons!!)
+
+## Future Features
