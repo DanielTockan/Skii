@@ -432,7 +432,7 @@ function handleImageUpload(event) {
 
 ## Obstacles Faced and Lessons
 
-- Expereinced tremendous difficulty finding ski Resort that met our needs. We decided to build our own API instead, and pull data that we could from external API's. An approach that I will use going forward.
+- Expereinced difficulty finding ski resort API's that met our needs. We decided to build our own API instead, and pull data that we could from external API's. An approach that I will use going forward.
 - Had major issues with deployment due to caps locks in our file structure. Learned best practices for setting up file structures and how to deploy going forward.
 - General issues with debugging trickier parts of the code that take a long time to figure out. Overcoming the feeling of lost, and relying on pair-programming and mathodical approach to solving problems.
 
