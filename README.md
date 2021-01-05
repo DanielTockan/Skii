@@ -151,7 +151,7 @@ The resorts schema had two fields that required different types of relationships
 
 A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (super admins) needed to be able to associated to multiple resort in order to execute CRUD funcitons to them. 
 
-Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments needed to be connected to users to enhance the social aspect, and users needed to be able to make as many comments as they liked. Both of these are not possible through using a comments field.
+Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments need to belong to a user to enhance the social aspect, and users needed to be able to make as many comments as they like. Both apects are not possible through using a comments field.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -187,9 +187,9 @@ schema
 
 #### Controllers
 
-CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
+CRUD methods were created for users and resorts to execute the app's functionality. I created the user controllers. 
 
-Provisions were made for scenarios where only logged in users, or the user associated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+Conditional logic was used for scenarios where only authorised users, or the user associated with a particular aspect of the app would be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
 
 ```js
 function modifyUser(req, res) {
@@ -216,7 +216,7 @@ function modifyUser(req, res) {
 }
 ```
 
-All requests made to the database to modify user credential passed through the router in the back-end via a PUT request. Secure route middleware was added to the route as follows:
+All database requests to modify user credentials passed through the router in the back-end via a PUT request. Secure route middleware was added to the route as follows:
 
 ```js
 router.route('/users/:accountId')
@@ -225,7 +225,7 @@ router.route('/users/:accountId')
   .put(secureRoute, userController.modifyUser)
 ```
 
-The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token.
+The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token. JSON Web Token technology was imported to enable this.
 
 The two "if" statements within "modifyUser" function, then conducted the following checks: 
 - The latter checked whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, access to the route was blocked
