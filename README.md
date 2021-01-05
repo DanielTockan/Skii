@@ -327,5 +327,5 @@ function goToEurope() {
 
 For an alternate view to see all the resorts in our database the resorts button in our navigation bar leads the user to this page.
 
-![Ski Resorts](./resources/screenshots/landing_page.png)
+![Ski Resorts](./resources/screenshots/resorts.png)
 
