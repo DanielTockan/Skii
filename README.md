@@ -2,6 +2,8 @@
 
 ![Ski Resorts](./resources/screenshots/landing_page.png)
 
+<br>
+
 ### Table of contents
 
 - Project Overview
@@ -16,13 +18,15 @@
 - Future Features
 - Key Learnings
 
+<br>
+
 ## Overview
 
 Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. 
 
-Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the backend of the project, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onbaording on logging in. I also  designed the router and user controllers.
+Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the back-end, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onbaording on logging in. I also  designed the router and user controllers.
 
-Many external libraries were used to enhance the user experience on the client-side throughout the app. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
+Many external libraries were used to enhance the user experience on the client-side throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
@@ -30,6 +34,8 @@ To enjoy the full experience, you can register using the credentials of your cho
 
 email: admin@admin.com <br>
 password: admin
+
+<br>
 
 ## The Brief
 
@@ -42,6 +48,7 @@ password: admin
 - Have a visually impressive design
 - Timeframe: 1 week
 
+<br>
 <!-- - Use a framework for responsiveness.
 - Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles.
 - Use best practices for writing code, such as semantic markup. -->
@@ -80,10 +87,11 @@ password: admin
 - Chrome Dev Tools
 - Heroku
 
+<br>
 
 ## Approach
 
-Once the Ski resort concept for the project was established a lot of focus was put into the planning of:
+Once the Ski resort concept was established a lot of focus was put into the planning of:
 - What the models look like, and the relationships between them
 - What controllers and routes were required
 - Where the data would be retrieved from (external API's, manually creating it, or some combination etc.)
@@ -91,17 +99,21 @@ Once the Ski resort concept for the project was established a lot of focus was p
 - What the stretch goals for the project were, and thinking ahead particularly about how the models would be impacted to support those
 - What external libraries would be implemented
 
-The thorough approach that we took to planning was vital in ensuring that all group members understood how the app would work at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
+The thorough approach takrn towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-I took charge of the project management aspects for Skii. As a group, we opted to use an agile framework to monitor and control our work and progress. We used Kanban for this, with the help of a Trello board. Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+I took charge of the project management aspects for Skii. We used an agile framework to monitor and control our work and progress, specifically Kanban, with the help of a Trello board. 
+
+INSERT  TREllO SCREENSHOTS HERE
+
+Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
 <br>
 
 ### Back-end:
 
-The first step taken was to create the schemata for the app. Based off of the notes from the plan created initially, we created three, one for the resorts, users and comments.
+The first step taken was to create the schemata for the app. Based off of the notes from the plan created initially, we created three - one for the resorts, users and comments.
 
 <br>
 
@@ -133,7 +145,7 @@ As can be seen above, the resorts schema had two fields that required different 
 
 The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
 
-The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). WHY DID THE COMMENTS HAD THEIR OWN SHCEMA, NOT JUST A NORMAL FIELD??. The comment schema had a user reference relationship of its own in order to assign a user to the comment they made.
+The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). The comment schema had a user reference relationship of its own in order to assign a user to the comment they made. This was the reason for creating a schema for comments, rather than having a comment field within the resorts schema.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -145,6 +157,9 @@ const commentSchema = new mongoose.Schema({
   timestamps: true
 })
 ```
+
+For the user schema, we employed the use of the Bcrypt library to hash the users password as an added level of security. Our password confirmation is stored in a virtual field and is checked against tge password the user enters before validation.
+
 The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
 
 <br>
