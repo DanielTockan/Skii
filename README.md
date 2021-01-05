@@ -164,7 +164,7 @@ The planning phase of the project enabled me to determine the correct relationsh
 
 CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
 
-Considerations were made for scenarios where only logged in users, or the user assosciated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+Provisions were made for scenarios where only logged in users, or the user assosciated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
 
 ```js
 function modifyUser(req, res) {
@@ -191,7 +191,7 @@ function modifyUser(req, res) {
 }
 ```
 
-All requests made to the database to update user credential passed through the router in the back-end. Secure route middleware was added to the route as follows:
+All requests made to the database to modify user credential passed through the router in the back-end via a PUT request. Secure route middleware was added to the route as follows:
 
 ```js
 router.route('/users/:accountId')
@@ -202,9 +202,9 @@ router.route('/users/:accountId')
 
 The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token.
 
-The two "if" statements within "modifyUser" function then conducted the following checks: 
-- The latter checks whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, an authorisation message blocking the PUT request appears
-- The former checks whether a valid user is logged in to begin with. If not, an authorisation message appears blocking access to the route 
+The two "if" statements within "modifyUser" function, then conducted the following checks: 
+- The latter checked whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, access to the route was blocked
+- The former checed whether a valid user is logged in to begin with. If not, once again, access to the route was blocked
 
 The secure route was used across many other routes in our back-end for the following uses:
 - Creating, updating and deleting comments
