@@ -273,5 +273,19 @@ Making reference to the "modifyUser" function once again, the following test was
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
 
-
 ### Front-end:
+
+After installing the React app and all the relevent depedencies, final sign-off was given on the pages that would be included. These were:
+- Home/Landing page
+- Resorts page
+- Individual resort page
+- My Account page
+- Login and sign up page
+
+A combination of the Bootstrap framework and CSS were used for styling, with a monochromatic colour scheme to match the ice white snow theme.
+
+#### Home Page
+
+As the first point of contact with the App, I wanted something visually impressive that drew users in. Using the React MapBox GL library, we rendered a map of the world with markers placed depciting the resorts seeded from our database. The longitude and latitude fields present in our models enabled this.
+
+![Ski Resorts](./resources/screenshots/landing_page.png)
