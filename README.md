@@ -380,3 +380,6 @@ Resorts.
 ```
 
 #### My Account Page
+
+The My Account page is the one stop shop for editing personal information, uploading a new display picture and viewing your favourite resorts.
+
