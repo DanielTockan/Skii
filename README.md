@@ -290,7 +290,7 @@ As the first point of contact with the App, I wanted something visually impressi
 
 ![Ski Resorts](./resources/screenshots/landing_page.png)
 
-Using the React MapBox GL library, we rendered a map of the world with markers depciting the resorts seeded from our database. The longitude and latitude fields present in our models enabled this. React Links were used to send the user to the resort page of marker they clicked on.
+Using the React MapBox GL library, we rendered a map of the world with markers depciting the resorts seeded from our database. The longitude and latitude fields present in our resorts model enabled this. React Links were used to send the user to the resort page of marker they clicked on.
 
 ```js
 {resorts.map((resort, index) => {
@@ -310,3 +310,17 @@ Using the React MapBox GL library, we rendered a map of the world with markers d
       })}
 ```
 
+A fucntion enabling users to filter for the regions they are most interesting, by clicking on the buttons towards the top left.
+
+```js
+function goToEurope() {
+    const WorldViewport = {
+      latitude: 46.2276,
+      longitude: 2.2137,
+      zoom: 4,
+      height: '100vh',
+      width: '100vw'
+    }
+    setViewPort(WorldViewport)
+  }
+```
