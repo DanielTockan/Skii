@@ -69,7 +69,7 @@ password: admin
 - CSS
 - Bootstrap framework
 - JavaScript
-- React
+- React (with hooks)
 - Axios
 - Cloudinary
 - React Mapbox GL
@@ -348,3 +348,7 @@ This view was achieved by mapping the resorts from our database into cards on a 
 
       })}
 ```
+
+Clicking on any of these resorts linked you to the individual page for the resort. On this page further information and fucntionality can be found.
+
+![Single Resorts](./resources/screenshots/single_resort.png)
