@@ -358,7 +358,6 @@ Clicking on any of these resorts linked you to the individual page for the resor
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
 ```
-- An external weather API were used to obtain the current weather forecasts for the next 7 days:
 
 ```js
 Resorts.
