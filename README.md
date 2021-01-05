@@ -2,8 +2,6 @@
 
 ![Skii](./resources/screenshots/skii.png)
 
-<br>
-
 ### Table of Contents
 
 - Project Overview
