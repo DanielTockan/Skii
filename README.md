@@ -352,3 +352,20 @@ The display was achieved by mapping the resorts from our database into cards on 
 Clicking on any of these resorts linked you to the individual page for the resort. On this page further information and fucntionality can be found.
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
+
+useStaten and external weather API was used to obtain the current weather forecasts for the next 7 days:
+
+```js
+const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
+```
+
+```js
+h6>Current temperature: {(weather.current.temp - 273) | 0}°C {weather.current.weather[0].description}</h6>
+  <div className="container">
+    <div className="row weather-days">
+      {weather.daily.map(day => {
+        return <div className="col" key={day.dt}><p>{(day.temp.max - 273) | 0}°C</p> <p>{(day.temp.min - 273) | 0}°C</p> <p>{day.weather[0].main}</p></div>
+      })}
+    </div>
+  </div>
+```
