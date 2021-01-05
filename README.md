@@ -325,11 +325,11 @@ function goToEurope() {
 
 #### Resorts & Single Resort Page
 
-For an alternate view to see all the resorts in our database the resorts button in our navigation bar leads the user to this page.
+For an alternate view to see all the resorts in our database, the resorts button in our navigation bar leads the user to this page:
 
 ![Ski Resorts](./resources/screenshots/resorts.png)
 
-This view was achieved by mapping the resorts from our database into cards on a page, like so:
+The display was achieved by mapping the resorts from our database into cards on a page, like so:
 
 ```js
 {resorts.map((resort, index) => {
