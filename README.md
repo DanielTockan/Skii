@@ -353,14 +353,14 @@ Clicking on any of these resorts linked you to the individual page for the resor
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
-useStaten and external weather API was used to obtain the current weather forecasts for the next 7 days:
+useState and external weather API were used to obtain the current weather forecasts for the next 7 days:
 
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
 ```
 
 ```js
-h6>Current temperature: {(weather.current.temp - 273) | 0}°C {weather.current.weather[0].description}</h6>
+<h6>Current temperature: {(weather.current.temp - 273) | 0}°C {weather.current.weather[0].description}</h6>
   <div className="container">
     <div className="row weather-days">
       {weather.daily.map(day => {
