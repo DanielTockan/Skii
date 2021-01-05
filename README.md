@@ -201,9 +201,13 @@ router.route('/users/:accountId')
 
 The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token.
 
-The two "if" statements within "modifyUser" function handled then conducted the following checks: 
-- The former checks whether a valid user is logged in to begin with. If not, an authorisation message appears blocking entry 
-- The latter checks whether the user ID retrieved from the middleware matches that of the user that they are trying to edit. If not, again, an authorisation message blocking entry appears
+The two "if" statements within "modifyUser" function then conducted the following checks: 
+- The latter checks whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, an authorisation message blocking the PUT request appears
+- The former checks whether a valid user is logged in to begin with. If not, an authorisation message appears blocking access to the route 
+
+The secure route was used across many other routes in our back-end for the following uses:
+- Creating, updating and deleting comments
+- Adding and removing favourite resorts to a user profiel
 
 Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired excercise carried out by Kasjan and myself.
 
