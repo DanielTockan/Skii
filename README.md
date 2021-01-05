@@ -13,10 +13,10 @@
   - Back-end
   - Front-end
 - Final Product
-- Wins & Blockers
-- Bugs
+- Trimuphs
+- Obstacles Ecountered and Lessons Learned
 - Future Features
-- Key Learnings
+
 
 <br>
 
