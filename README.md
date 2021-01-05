@@ -8,10 +8,10 @@
 2. [The Brief](#The-Brief)
 3. [Technologies Used](#Technologies-Used)
 4. [The Approach](#The-Approach)
-  - Back-end
-  - Front-end
+    - Back-end
+    - Front-end
 5. [Triumphs](#Triumphs)
-6. [Obstacles Faced (and lessons!!)](#Obstacles-Face-(and-lessons!!))
+6. [Obstacles Faced (and Lessons!!)](#Obstacles-Face-and-Lessons!!)
 7. [Future Features](#Future-Features)
 
 <br>
@@ -416,6 +416,6 @@ function handleImageUpload(event) {
 
 ## Triumphs
 
-## Obstacles Faced (and lessons!!)
+## Obstacles Faced and Lessons!!
 
 ## Future Features
