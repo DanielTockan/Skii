@@ -1,10 +1,10 @@
 # Skii App (SEI Project 3)
 
-![Ski Resorts](./resources/screenshots/landing_page.png)
+![Skii](./resources/screenshots/skii.png)
 
 <br>
 
-### Table of contents
+### Table of Contents
 
 - Project Overview
 - The Brief
@@ -77,7 +77,7 @@ password: admin
 - React Mapbox GL
 - External Weather API
 
-### Development tools:
+### Development Tools:
 
 - VS Code
 - Git
@@ -276,11 +276,11 @@ Making reference to the "modifyUser" function once again, the following test was
 ### Front-end:
 
 After installing the React app and all the relevent depedencies, final sign-off was given on the pages that would be included. These were:
-- Home/Landing page
-- Resorts page
-- Individual resort page
-- My Account page
-- Login and Sign Up page
+- Home Page
+- Resorts Page
+- Individual Resort Page
+- My Account Page
+- Login and Sign Up Page
 
 A combination of the Bootstrap framework and CSS were used for styling, with a monochromatic colour scheme to match the ice white snow theme.
 
@@ -310,7 +310,7 @@ Using the React MapBox GL library, we rendered a map of the world with markers d
       })}
 ```
 
-A fucntion enabling users to filter for the regions they are most interesting, by clicking on the buttons towards the top left.
+A function enabling users to filter for the regions they are most interesting, by clicking on the buttons towards the top left.
 
 ```js
 function goToEurope() {
@@ -324,3 +324,8 @@ function goToEurope() {
     setViewPort(WorldViewport)
   }
 ```
+
+#### Resorts & Single Resort Page
+
+For an alternate view to see all the resorts in our database the resorts button in our navigation bar leads the user to this page.
+
