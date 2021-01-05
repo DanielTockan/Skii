@@ -146,9 +146,9 @@ const resortsSchema = new mongoose.Schema({
 
 The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
-The user field relationship was formed with USER LEVEL/OBJECT LEVEL(WHICH ONE??) permissions in mind. As you will see in the controller section, logic was created to ensure that only the creator/poster of the resort (in this case the super admin) would be able to delete or edit the resort details. A REFERENCE RELATIONSHIP WAS USED FOR THIS FIELD BECAUSE... (STATE THE LOGIC AND REASONING BEHIND THIS).
+A relationship was created between the user field and the model, with object level permissions in mind. In particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (admins) needed to be able to execute CRUD funcitons on multiple resorts. An embedded relationships would not permit for this.
 
-The comments field relationship existed as we wanted users to talk and interact about their favourite resorts. AN EMBEDDED RELATIONSHIP WAS CHOSEN BECAUSE....... (STATE THE LOGIC AND REASONING BEHIND THIS). The comment schema had a user reference relationship of its own in order to assign a user to the comment they made. This was the reason for creating a schema for comments, rather than having a comment field within the resorts schema.
+Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to one resort in order for user to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comment field. Comments needed to be connected to users for the social aspect, and users needed to be able to make as many comments as they liked.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -218,7 +218,7 @@ The secure route was used across many other routes in our back-end for the follo
 
 Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and myself.
 
-Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
+Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the user level permissions worked as expected.
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
 
