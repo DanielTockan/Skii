@@ -19,11 +19,11 @@
 
 ## Project Overview
 
-Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. 
+Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. 
 
-Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the back-end, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onboarding on logging in. I also  designed the router and user controllers.
+This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. 
 
-Many external libraries were used to enhance the user experience on the client-side throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
+I contributed to all aspects of the front-end and back-end but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the user experience on the client-side throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
