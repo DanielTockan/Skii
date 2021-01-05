@@ -52,7 +52,7 @@ password: admin
 
 ## Technologies Used
 
-### Back-end:
+### Back-end tech:
 
 - Node.js
 - Express
@@ -62,7 +62,7 @@ password: admin
 - JSON Web Token
 - Body Parser
 
-### Front-end:
+### Front-end tech:
 
 - HTML
 - CSS
@@ -87,6 +87,8 @@ password: admin
 <br>
 
 ## The Approach
+
+### Planning:
 
 Once the Ski resort concept was established a lot of focus was put into the planning of:
 - What the models look like, and the relationships between them
