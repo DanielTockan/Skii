@@ -24,7 +24,7 @@
 
 Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. 
 
-Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the back-end, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onbaording on logging in. I also  designed the router and user controllers.
+Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. On the back-end, I contributed to all aspects but was heavily involved in the user level and object level authentication and middleware used for onboarding on logging in. I also  designed the router and user controllers.
 
 Many external libraries were used to enhance the user experience on the client-side throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. Upon completion of the development phase of the project, it was deployed using Heroku.
 
@@ -42,7 +42,7 @@ password: admin
 - Build a full-stack MERN web application
 - Use an Express API to serve your data from a Mongo database
 - Consume your API with a separate front-end built with React
-- Be a complete product which means multiple relationships and CRUD functionality for the relevent models
+- Be a complete product which means multiple relationships and CRUD functionality for the relevant models
 - Implement thoughtful user stories/wireframes, significant enough to clearly determine which features are core MVP and which are stretch goals
 - Be deployed online so its accessible publicly (using Heroku and MongoDB Atlas database)
 - Have a visually impressive design
@@ -114,7 +114,7 @@ INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
 
-Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+Daily stand-ups were held every morning, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
 ### Back-end:
 
@@ -170,7 +170,7 @@ The planning phase of the project enabled me to determine the correct relationsh
 
 CRUD methods were created for both the users and resorts to execute the app's functionality. I created the user controllers. 
 
-Provisions were made for scenarios where only logged in users, or the user assosciated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
+Provisions were made for scenarios where only logged in users, or the user associated with a particular aspect of the app should be able to access or amend data. An instance of this can be seen with the "modifyUser" function, responsible for allowing users to edit their credentials.
 
 ```js
 function modifyUser(req, res) {
@@ -210,13 +210,13 @@ The secure route controlled the authentication process, storing the ID of the lo
 
 The two "if" statements within "modifyUser" function, then conducted the following checks: 
 - The latter checked whether the user ID retrieved from the secure route matches that of the user that they are trying to edit. If not, access to the route was blocked
-- The former checed whether a valid user is logged in to begin with. If not, once again, access to the route was blocked
+- The former checked whether a valid user is logged in to begin with. If not, once again, access to the route was blocked
 
 The secure route was used across many other routes in our back-end for the following uses:
 - Creating, updating and deleting comments
-- Adding and removing favourite resorts to a user profiel
+- Adding and removing favourite resorts to a user profile
 
-Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired excercise carried out by Kasjan and myself.
+Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and myself.
 
 Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the OBJECT/USER (WHICH ONE??) level permissions worked as expected.
 
