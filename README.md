@@ -9,7 +9,7 @@
 - Project Overview
 - The Brief
 - Technologies Used
-- Approach Taken
+- The Approach
   - Back-end
   - Front-end
 - Final Product
@@ -20,7 +20,7 @@
 
 <br>
 
-## Overview
+## Project Overview
 
 Skii is a global ski resort application that allows members to be part of an interactive, online community where information, thoughts and opinions on the major ski resorts across the world are shared. This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. 
 
@@ -89,7 +89,7 @@ password: admin
 
 <br>
 
-## Approach
+## The Approach
 
 Once the Ski resort concept was established a lot of focus was put into the planning of:
 - What the models look like, and the relationships between them
