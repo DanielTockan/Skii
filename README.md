@@ -109,13 +109,9 @@ INSERT  TREllO SCREENSHOTS HERE
 
 Daily stnad-ups were held every monring, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
-<br>
-
 ### Back-end:
 
 The first step taken was to create the schemata for the app. Based off of the notes from the plan created initially, we created three - one for the resorts, users and comments.
-
-<br>
 
 #### Schemata
 
@@ -162,7 +158,6 @@ For the user schema, we employed the use of the Bcrypt library to hash the users
 
 The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
 
-<br>
 
 #### Controllers
 
@@ -216,6 +211,5 @@ Making reference to the "modifyUser" function once again, the following test was
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
 
-<br>
 
 ### Front-end:
