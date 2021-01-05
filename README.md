@@ -100,11 +100,11 @@ Once the Ski resort concept was established a lot of focus was put into the plan
 - What external libraries would be implemented
 - Wireframing and decisions on the layout and design of the app were tackled after the back-end was complete
 
-The thorough approach taken towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
+The thorough approach taken towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency of the deliverables that needed to be complete, giving a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress, with the help of a Trello board and created user stories to define MVP and our stretch goals. 
+I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress with the help of a Trello board, and created user stories to define MVP and our stretch goals. 
 
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
@@ -114,13 +114,16 @@ INSERT  USER STORIES HERE!!!!!!
 INSERT  USER STORIES HERE!!!!!!
 INSERT  USER STORIES HERE!!!!!!
 
-Daily stand-ups were held each morning, as well as regular check-ups on progress and any blockers faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+Daily stand-ups were held each morning, supplemented by regular check-ups on progress and any blockers faced. The occured via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
 ### Back-end:
 
-The first step taken was to create the schemata for the app. Based off of initial planning, we created three - one for the resorts, users and comments.
-
 #### Schemata
+
+The first step taken was to create the schemata for the app. Based off of the initial planning, three were created:
+ - Users schema
+ - Resorts schema
+ - Comments schema
 
 ```js
 const resortsSchema = new mongoose.Schema({
@@ -146,9 +149,9 @@ const resortsSchema = new mongoose.Schema({
 
 The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
-A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (admins) needed to be able to execute CRUD funcitons on multiple resorts. An embedded relationships would not permit for this.
+A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (super admins) needed to be able to associated to multiple resort in order to execute CRUD funcitons to them. 
 
-Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments needed to be connected to users to enhance the social aspect, and users needed to be able to make as many comments as they liked. Both of these are not possible through using a comments field.
+Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments needed to be connected to users to enhance the social aspect, and users needed to be able to make as many comments as they liked. Both of these are not possible through using a comments field.
 
 ```js
 const commentSchema = new mongoose.Schema({
