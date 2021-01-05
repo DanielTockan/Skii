@@ -351,7 +351,7 @@ The display was achieved by mapping the resorts from our database into cards on 
 
 Clicking on any of these resorts linked you to the individual page for the resort.
 
-Users are also able to:
+Here, users are also able to:
   - View informaation specific to that resort
   - Add the resort to their favourites (displayed on their accont page)
   - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
