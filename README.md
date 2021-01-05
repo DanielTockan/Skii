@@ -13,7 +13,7 @@
   - Back-end
   - Front-end
 - Final Product
-- Trimuphs
+- Triumphs
 - Obstacles Faced (and lessons!!)
 - Future Features
 
@@ -104,7 +104,7 @@ The thorough approach taken towards planning was vital in ensuring that all grou
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-I took charge of the project management aspects for Skii. We used an agile framework to monitor and control our work and progress, specifically Kanban, with the help of a Trello board. 
+I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress, with the help of a Trello board. 
 
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
