@@ -377,3 +377,5 @@ Resorts.
           res.send({ resort: resort, weather: resp.data })
         })
 ```
+
+#### My Account Page
