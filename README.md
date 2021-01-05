@@ -280,12 +280,33 @@ After installing the React app and all the relevent depedencies, final sign-off 
 - Resorts page
 - Individual resort page
 - My Account page
-- Login and sign up page
+- Login and Sign Up page
 
 A combination of the Bootstrap framework and CSS were used for styling, with a monochromatic colour scheme to match the ice white snow theme.
 
 #### Home Page
 
-As the first point of contact with the App, I wanted something visually impressive that drew users in. Using the React MapBox GL library, we rendered a map of the world with markers placed depciting the resorts seeded from our database. The longitude and latitude fields present in our models enabled this.
+As the first point of contact with the App, I wanted something visually impressive that drew users in.
 
 ![Ski Resorts](./resources/screenshots/landing_page.png)
+
+Using the React MapBox GL library, we rendered a map of the world with markers depciting the resorts seeded from our database. The longitude and latitude fields present in our models enabled this. React Links were used to send the user to the resort page of marker they clicked on.
+
+```js
+{resorts.map((resort, index) => {
+        return <Link to={`/resorts/${resort.name}`} key={index}>
+          <Marker 
+            latitude={resort.lat}
+            longitude={resort.lon}
+            
+          >
+            {/* <div>
+              <span>{resort.name}</span>
+            </div> */}
+
+            <img className="marker" src="https://img.icons8.com/material/24/000000/marker--v1.png" />
+          </Marker>
+        </Link>
+      })}
+```
+
