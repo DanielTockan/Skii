@@ -384,3 +384,5 @@ Resorts.
 The My Account page is the one stop shop for editing personal information, uploading a new display picture and viewing your favourite resorts.
 
 ![My Account](./resources/screenshots/my_account.png)
+
+The most complex aspect of this page was the integration of the cloudinary widget to faciliatate the upload of new images. This was implemented fully in the update your account page: 
