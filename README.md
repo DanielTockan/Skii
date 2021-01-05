@@ -329,3 +329,22 @@ For an alternate view to see all the resorts in our database the resorts button 
 
 ![Ski Resorts](./resources/screenshots/resorts.png)
 
+This view was achieved by mapping the resorts from our database into cards on a page, like so:
+
+```js
+{resorts.map((resort, index) => {
+
+        return <div key={index} className="card">
+          <img className="card-img-top" src={`${resort.image}`} alt="Card image cap"></img>
+          <div className="card-body">
+            <h5 className="card-title">{resort.name}</h5>
+            <h6>{resort.country}</h6>
+            <p className="card-text-all-resorts">{resort.description}</p>
+            {/* <p className="dot-dot">...</p> */}
+
+            <Link to={`/resorts/${resort.name}`} className="btn btn-dark btn-resort">View Resort</Link>
+          </div>
+        </div>
+
+      })}
+```
