@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+
+/* UNIVERSAL */
+
+body {
+  background-color: black;
+}
+
+.btn-dark {
+  opacity: 0.7;
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
+
+
+.container-custom {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-single {
+  height: 100vh;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-image-login, .background-image-joinus, .background-image-single-resort, .background-image-single-account {
+  background-image: url('https://i.imgur.com/XjXqzAY.png');
+  background-size: cover;
+  height: 100vh;
+}
+
+.container-resorts {
+  /* height: 100vh; */
+  top: 7rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-top: 10px;
+  position: relative;
+  top: 7rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-account {
+  /* height: 100vh; */
+  top: 7rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-top: 10px;
+  position: relative;
+  top: 7rem;
+}
+
+#error {
+  font-size: 10px;
+}
+
+.marker {
+  cursor: pointer !important;
+}
+
+/* NAVBAR */
+
+.navbar {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .1rem;
+}
+
+.nav-background {
+  background-color: rgb(52, 58, 64, 0.8) !important;
+}
+
+.fixed-top {
+  backface-visibility: hidden;
+  z-index: 999 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding-top: .8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover {
+  cursor: pointer;
+  /* color: #1255ac; */
+}
+
+
+/* LOGIN */
+
+
+form {
+  width: 260px;
+  text-align: center;
+  align-self: center;
+  z-index: 999!important;
+}
+
+form input {
+  color: white!important;
+  border-radius: 0 !important;
+  background-color: rgb(255, 255, 255, 0.2)!important;
+  border: 1px solid white;
+}
+
+form ::placeholder {
+  color: rgb(0, 0, 0, 0.5)!important;
+}
+
+
+/* RESORTS PAGE */
+
+.card {
+  width: 18rem;
+  height: 22rem;
+  margin: .7rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 10rem;
+}
+
+.btn-resort {
+  font-size: .8rem !important;
+}
+
+.card-text {
+  font-size: .7rem;
+  /* overflow-y: scroll; */
+  overflow-x: hidden !important;
+  height: inherit;
+}
+
+.card-text-all-resorts {
+  font-size: .7rem;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+  height: 3rem;
+  /* display: inline; */
+}
+.dot-dot {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+/* HOME PAGE */
+
+.map-menu {
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+
+.home-title {
+  color: white;
+  font-size: 2.3rem;
+  margin-left:1rem;
+  font-family: 'Faster One', cursive;
+  margin-bottom: 0;
+}
+
+.ski-icon {
+  color: rgb(255, 255, 255, 0.9);
+}
+
+/* ACCOUNT PAGE */
+
+#a-card {
+  /* width: 22rem; */
+  height: inherit!important;
+  /* margin: .7rem; */
+}
+
+#wide-card {
+  width: 18rem;
+  height: 22rem;
+  margin: .7rem;
+}
+
+#a-card img {
+  width: 100%;
+  height: 13rem;
+}
+
+#a-btn-resort {
+  font-size: .8rem !important;
+}
+
+#a-card-text {
+  font-size: .7rem;
+  overflow: scroll;
+  height: 3rem;
+}
+
+.card-transparent {
+  background-color: rgb(255, 255, 255, 0.5)!important;
+
+}
+
+/* SINGLE RESORT */
+
+.star {
+  color: gold;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border-style: none;
+  transition: .3s
+}
+
+.star:hover {
+  color: gold;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border-style: none;
+}
+
+.star:focus,
+.star-active:focus {
+  outline: none;
+}
+
+.star-active {
+  color: gold;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border-style: none;
+}
+
+
+
+.card-single {
+  display: flex!important;
+  flex-direction: row !important;
+  width: 50rem;
+  top: 7rem;
+  height: inherit;
+  opacity: 0.9;
+}
+
+.card-img-top-single {
+  width: 100%;
+  height: 10rem;
+  margin: 20px;
+}
+
+.resort-single-info strong {
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+
+.resort-single-info p {
+  font-size: .7rem;
+}
+
+.resort-info-upper {
+  font-size: .7rem;
+  overflow: scroll;
+  position: relative;
+  width: 30rem;
+  margin-left: 1rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.card-text-single {
+  height: 3rem;
+  overflow-y: scroll;
+  overflow-x: hidden!important;
+
+}
+
+.weather-days {
+  font-size: .5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.resort-single-side {
+  font-size: .7rem;
+  width: 100%;
+  margin-left: 1.2rem;
+}
+
+
+/* COMMENTS */
+
+.comments-box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 12rem;
+  position: relative;
+  bottom: 0;
+  overflow-x: hidden;
+}
+
+
+.comment {
+  margin-right: 2rem;
+  word-wrap: break-word;
+  width: 15rem;
+  font-size: .7rem;
+}
+
+.comments {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+  height: 7rem;
+}
+
+
+.comments-spaced {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.comment-user {
+  color: red;
+  font-size: .7rem;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+textarea {
+  font-size: 1rem;
+  margin-right: 1rem !important;
+  padding: .3rem !important;
+  height: 1rem;
+  resize: none !important;
+}
+
+
+
+textarea:focus,
+.btn-submit-comments:focus {
+  outline: none;
+}
+
+.submit-area {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.trash-icon {
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.btn-submit-comments {
+  font-size: .8rem !important;
+}
+
+.home-button {
+  margin: 2px;
+  opacity: 0.5;
+  /* text-emphasis-style: ; */
+}
+
+/* COMMENTS */
