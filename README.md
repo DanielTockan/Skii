@@ -195,9 +195,20 @@ function modifyUser(req, res) {
 }
 ```
 
-The two "if" statements within the above function handled the USER/OBJECT (WHICH ONE??) level permission in this regard. 
-- The former checks whether a valid user is logged in to begin with. If not, an error message appears blocking entry 
-- The latter checks whether the user ID asscosciated with the user logged in, matches that of the user that they are trying to edit. If not, again, an error message blocking entry appears
+All requests made to the database to update user credential passed through the router in the back-end. Secure route middleware was added to the route as follows:
+
+```js
+router.route('/users/:accountId')
+  .get(userController.singleUser)
+  .delete(secureRoute, userController.removeUser)
+  .put(secureRoute, userController.modifyUser)
+```
+
+The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token.
+
+The two "if" statements within "modifyUser" function handled then conducted the following checks: 
+- The former checks whether a valid user is logged in to begin with. If not, an authorisation message appears blocking entry 
+- The latter checks whether the user ID retrieved from the middleware matches that of the user that they are trying to edit. If not, again, an authorisation message blocking entry appears
 
 Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired excercise carried out by Kasjan and myself.
 
@@ -205,7 +216,6 @@ Making reference to the "modifyUser" function once again, the following test was
 
 ![Testing in Insomnia](./resources/screenshots/test_in_insomnia.png)
 
-#### Middleware
-
+<br>
 
 ### Front-end:
