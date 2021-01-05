@@ -228,7 +228,7 @@ router.route('/users/:accountId')
 The secure route controlled the authentication process, storing the ID of the logged in user via a Bearer token. JSON Web Token technology was imported to enable this like so:
 
 ```js
-unction secureRoute(req, res, next) {
+function secureRoute(req, res, next) {
   const authToken = req.headers.authorization
   console.log('in the secure route')
   console.log(authToken)
