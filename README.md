@@ -104,21 +104,21 @@ The thorough approach taken towards planning was vital in ensuring that all grou
 
 ![Plan](./resources/screenshots/plan_to_production.png)
 
-I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress, with the help of a Trello board. 
+I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress, with the help of a Trello board and created user stories to define MVP and our stretch goals. 
 
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
 INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
+INSERT  USER STORIES HERE!!!!!!
+INSERT  USER STORIES HERE!!!!!!
+INSERT  USER STORIES HERE!!!!!!
 
-Daily stand-ups were held every morning, as well as regular check-ups on any blockers or progress anybody had faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+Daily stand-ups were held each morning, as well as regular check-ups on progress and any blockers faced. We were in constant communication via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
 ### Back-end:
 
-The first step taken was to create the schemata for the app. Based off of the notes from the plan created initially, we created three - one for the resorts, users and comments.
+The first step taken was to create the schemata for the app. Based off of initial planning, we created three - one for the resorts, users and comments.
 
 #### Schemata
 
@@ -146,9 +146,9 @@ const resortsSchema = new mongoose.Schema({
 
 The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
-A relationship was created between the user field and the model, with object level permissions in mind. In particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (admins) needed to be able to execute CRUD funcitons on multiple resorts. An embedded relationships would not permit for this.
+A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (admins) needed to be able to execute CRUD funcitons on multiple resorts. An embedded relationships would not permit for this.
 
-Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to one resort in order for user to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comment field. Comments needed to be connected to users for the social aspect, and users needed to be able to make as many comments as they liked.
+Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments needed to be connected to users to enhance the social aspect, and users needed to be able to make as many comments as they liked. Both of these are not possible through using a comments field.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -161,10 +161,26 @@ const commentSchema = new mongoose.Schema({
 })
 ```
 
-For the user schema, we employed the use of the Bcrypt library to hash the users password as an added level of security. Our password confirmation is stored in a virtual field and is checked against the password that the user enters before validation occurs.
+For the user schema, we imported and employed the use of the Bcrypt library to hash and encrypt the users password as an added level of security. 
 
-The planning phase of the project enabled me to determine the correct relationship types from the offset meaning that no retrospective changes were necessary.
+```js
+  .pre('save', function hashPassword(next) {
+    if (this.isModified('password')) {
+      this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())
+    }
+    next()
+  })
+```
 
+Our password confirmation is stored in a virtual field and is checked against the password that the user enters before validation occurs.
+
+```js
+schema
+  .virtual('passwordConfirmation')
+  .set(function setPasswordConfirmation(passwordConfirmation) {
+    this._passwordConfirmation = passwordConfirmation
+  })
+```
 
 #### Controllers
 
