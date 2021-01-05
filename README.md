@@ -353,7 +353,7 @@ Clicking on any of these resorts linked you to the individual page for the resor
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
-- An external weather API and useState were used to obtain the current weather and forecasts for the next 7 days:
+- An external weather API and useState were used to obtain and dynamically update the current weather, and forecasts for the next 7 days:
 
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
@@ -371,3 +371,8 @@ Resorts.
           res.send({ resort: resort, weather: resp.data })
         })
 ```
+
+As can be seen, users are also able to:
+  - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
+  - Add a rating to the resort
+  - Add the resort to their favourites (displayed on their accont page)
