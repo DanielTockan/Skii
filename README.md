@@ -8,6 +8,7 @@
 2. [The Brief](#The-Brief)
 3. [Technologies Used](#Technologies-Used)
 4. [The Approach](#The-Approach)
+    - Planning
     - Back-end
     - Front-end
 5. [Triumphs](#Triumphs)
