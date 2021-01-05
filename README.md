@@ -98,6 +98,7 @@ Once the Ski resort concept was established a lot of focus was put into the plan
 - What pages were needed on the frontend, and how they would interact with the API
 - What the stretch goals for the project were, and thinking ahead particularly about how the models would be impacted to support those
 - What external libraries would be implemented
+- Wireframing and decisions on the layout and design of the app were tackled after the back-end was complete
 
 The thorough approach takrn towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency to the deliverables that needed to be complete, giving us a baseline to track progress against. Most importantly, it made writing our code much simpler as less retrospective changes were necessary.
 
