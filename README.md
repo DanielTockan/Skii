@@ -93,7 +93,30 @@ password: admin
 
 ### The API:
 
+Our online search for an exisiting ski API containing datapoints meeting our criteria was unsuccesful. API's either had expensive licensing fees are were not adequately populated as desribed. As a result, we decided to build our own within the seed file:
 
+```js
+ {
+   name: 'Val Thorens',
+   country: 'France',
+   top_elevation: 3568,
+   bottom_elevation: 1650,
+   lon: 6.58000,
+   lat: 45.29806,
+   image: 'https://i.imgur.com/LumFgEX.jpg',
+   user: users[0],
+   description: 'With the access of the Three Valleys, Val Thohave one of the largest skiing area in the world! Beginintermidates and experts will all find a challenge here!',
+   skilifts: '137',
+   openingtimes: '08:30 - 16:30',
+   slopeslength: '600km',
+   adultticket: '€64.50,-',
+   childticket: '€51.60,-',
+   userRating: 4,
+   numOfRatings: 0
+  },
+```
+
+Over 40 resorts were added, gathering their data from various sources online. A drawback of this option was that we would have to manually scan update and implement them ourselves, however this was a necessary evil to get the information we desired.
 
 ### Planning:
 
