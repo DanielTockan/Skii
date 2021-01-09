@@ -27,6 +27,7 @@ password: admin
 2. [The Brief](#The-Brief)
 3. [Technologies Used](#Technologies-Used)
 4. [The Approach](#The-Approach)
+    - [The API](#The-API)
     - [Planning](#Planning)
     - [Back-end](#Back-end)
     - [Front-end](#Front-end)
@@ -90,6 +91,10 @@ password: admin
 
 ## The Approach
 
+### The API:
+
+
+
 ### Planning:
 
 Once the Ski resort concept was established a lot of focus was put into the planning of:
@@ -109,13 +114,7 @@ For example:
 
 I took charge of the project management aspects for Skii. We used a Kanban style agile framework to monitor and control our work and progress with the help of a Trello board, and created user stories to define MVP and our stretch goals. 
 
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  TRELLO SCREENSHOTS HERE
-INSERT  USER STORIES HERE!!!!!!
-INSERT  USER STORIES HERE!!!!!!
-INSERT  USER STORIES HERE!!!!!!
+![Trello](./resources/screenshots/skii_trello.png)
 
 Daily stand-ups were held each morning, supplemented by regular check-ups on progress and any blockers faced. The occured via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
