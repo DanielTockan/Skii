@@ -93,7 +93,7 @@ password: admin
 
 ### The API:
 
-Our online search for an existing ski API containing datapoints meeting our criteria was unsuccessful. The API's either had expensive licensing fees are were not adequately populated as described. As a result, we decided to build our own within the seed file:
+Our online search for an existing ski API containing datapoints meeting our criteria was unsuccessful. The API's either had expensive licensing fees or were not adequately populated as described. As a result, we decided to build our own within the seed file:
 
 ```js
  {
@@ -105,7 +105,7 @@ Our online search for an existing ski API containing datapoints meeting our crit
    lat: 45.29806,
    image: 'https://i.imgur.com/LumFgEX.jpg',
    user: users[0],
-   description: 'With the access of the Three Valleys, Val Thohave one of the largest skiing area in the world! Beginintermidates and experts will all find a challenge here!',
+   description: 'With the access of the Three Valleys, Val Thorens is one of the largest skiing area in the world! Beginners, intermidates and experts will all find a challenge here!',
    skilifts: '137',
    openingtimes: '08:30 - 16:30',
    slopeslength: '600km',
