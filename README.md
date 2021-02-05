@@ -8,7 +8,7 @@ Skii is a global ski resort application that allows members to be part of an int
 
 This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. 
 
-I contributed to most aspects of the front-end and back-end,but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the client-side experience throughout the apps components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. 
+I contributed to most aspects of the front-end and back-end, but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the client-side experience throughout the app's components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. 
 
 Upon completion, Skii was deployed using Heroku.
 
@@ -93,7 +93,7 @@ password: admin
 
 ### The API:
 
-Our online search for an exisiting ski API containing datapoints meeting our criteria was unsuccesful. API's either had expensive licensing fees are were not adequately populated as desribed. As a result, we decided to build our own within the seed file:
+Our online search for an existing ski API containing datapoints meeting our criteria was unsuccessful. API's either had expensive licensing fees are were not adequately populated as described. As a result, we decided to build our own within the seed file:
 
 ```js
  {
@@ -123,13 +123,13 @@ Over 40 resorts were added, gathering their data from various sources online. A 
 Once the Ski resort concept was established a lot of focus was put into the planning of:
 - What the schemata would look like, and the relationships between them
 - What controllers and routes were required
-- Where the data would be retrieved from (external API's, manual creation, or some combination of btoh)
+- Where the data would be retrieved from (external API's, manual creation, or some combination of both)
 - What pages were needed on the frontend, and how they would interact with the API
 - What the MVP and stretch goals for the project were (via User Stories), and thinking ahead particularly about how the models would be impacted to support those
 - What external libraries would be implemented
 - Wireframing and decisions on the layout and design of the app were tackled after the back-end was complete
 
-Our approach towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency of our deliverables, giving a baseline to track progress against. Most importantly, it made writing our back-end code simpler as less retrospective changes were necessary.
+Our approach towards planning was vital in ensuring that all group members understood how the app would function at a fundamental level. It provided transparency of our deliverables, giving a baseline to track progress against. Most importantly, it made writing our back-end code simpler as fewer retrospective changes were necessary.
 
 For example:
 
@@ -139,7 +139,7 @@ I took charge of the project management aspects for Skii. We used a Kanban style
 
 ![Trello](./resources/screenshots/skii_trello.png)
 
-Daily stand-ups were held each morning, supplemented by regular check-ups on progress and any blockers faced. The occured via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
+Daily stand-ups were held each morning, supplemented by regular check-ups on progress and any blockers faced. The occurred via Zoom breakout rooms and Slack - this was particularly useful as we applied pair-programming for debugging and problem solving.
 
 ### Back-end:
 
@@ -174,9 +174,9 @@ const resortsSchema = new mongoose.Schema({
 
 The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
-A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controllers section. A reference relationship was chosen in this instance as the asscociated user (super admins) needed to be able to associated to multiple resort in order to execute CRUD funcitons to them. 
+A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controller's section. A reference relationship was chosen in this instance as the asscociated user (super admins) needed to be able to associate to multiple resort in order to execute CRUD funcitons to them. 
 
-Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments need to belong to a user to enhance the social aspect, and users needed to be able to make as many comments as they like. Both apects are not possible through using a comments field.
+Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments need to belong to a user to enhance the social aspect, and users needed to be able to make as many comments as they like. Both aspects are not possible through using a comments field.
 
 ```js
 const commentSchema = new mongoose.Schema({
@@ -189,7 +189,7 @@ const commentSchema = new mongoose.Schema({
 })
 ```
 
-For the user schema, we imported and employed the use of the Bcrypt library to hash and encrypt the users password as an added level of security. 
+For the user schema, we imported and employed the use of the Bcrypt library to hash and encrypt the user's password as an added level of security. 
 
 ```js
   .pre('save', function hashPassword(next) {
@@ -241,7 +241,7 @@ function modifyUser(req, res) {
 }
 ```
 
-All database requests to modify user credentials passed through the backe-end router via a PUT request. Secure route middleware was added to the route as follows:
+All database requests to modify user credentials passed through the back-end router via a PUT request. Secure route middleware was added to the route as follows:
 
 ```js
 router.route('/users/:accountId')
@@ -292,7 +292,7 @@ The secure route was used across many other routes in our back-end for the follo
 - Creating, updating and deleting comments
 - Adding and removing favourite resorts to a user profile
 
-Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and myself.
+Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and me.
 
 Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the user level permissions worked as expected.
 
@@ -300,7 +300,7 @@ Making reference to the "modifyUser" function once again, the following test was
 
 ### Front-end:
 
-After installing the React app and all the relevent depedencies, final sign-off was given on the pages that would be included. These were:
+After installing the React app and all the relevant dependencies, final sign-off was given on the pages that would be included. These were:
 - Home Page
 - Resorts Page
 - Individual Resort Page
@@ -315,7 +315,7 @@ As the first point of contact with the App, I wanted something visually impressi
 
 ![Home page](./resources/screenshots/landing_page.png)
 
-Using the React MapBox GL library, we rendered a map of the world, with markers depciting the resorts seeded from our database. The longitude and latitude fields present in our resorts model enabled this. React Links were used to send the user to the resort page of marker they clicked on.
+Using the React MapBox GL library, we rendered a map of the world, with markers depicting  the resorts seeded from our database. The longitude and latitude fields present in our resorts model enabled this. React Links were used to send the user to the resort page of marker they clicked on.
 
 ```js
 {resorts.map((resort, index) => {
@@ -381,13 +381,13 @@ Clicking on any of these resorts linked you to the individual page for the resor
 Here, users are also able to:
   - View information specific to that resort
   - Add the resort to their favourites (displayed on My Account page)
-  - Leave comments about the resort (with CRUD fucntionality and user level permissions applied)
+  - Leave comments about the resort (with CRUD functionality and user level permissions applied)
   - Add a rating to the resort
 
 ![Single Resorts](./resources/screenshots/single_resort.png)
 
 - An external weather API and useState were used to obtain and dynamically update the current weather, and forecasts for the next 7 days:
-- Similarly to the markers on the homepage, weather information was obtained using longitude and latitude co-ordinates
+- Similar to the markers on the homepage, weather information was obtained using longitude and latitude co-ordinates
 
 ```js
 const [weather, updateWeather] = useState({ current: { weather: [{}] }, daily: [] })
@@ -412,11 +412,11 @@ The My Account page is the one stop shop for editing personal information, uploa
 
 ![My Account](./resources/screenshots/my_account.png)
 
-The most complex aspect of this page was the integration of the cloudinary widget to faciliatate the upload of new images. This was implemented fully in the update your account page: 
+The most complex aspect of this page was the integration of the Cloudinary widget to ffacilitate the upload of new images. This was implemented fully in the update your account page: 
 
 ![Update Account](./resources/screenshots/update_account.png)
 
-This library was outside of the scope of the course, requiring me to go through the the source documentation. I produced the following function that was triggered by an onClick event listener whenever the upload image button was pressed:
+This library was outside of the scope of the course, requiring me to go through the source documentation. I produced the following function that was triggered by an onClick event listener whenever the upload image button was pressed:
 
 ```js
 function handleImageUpload(event) {
@@ -445,8 +445,8 @@ function handleImageUpload(event) {
 
 ## Triumphs
 
-- Excellent Team work.
-- No major issues experienced using git, ie losing data or mismanaged conflicts.
+- Excellent teamwork.
+- No major issues experienced using git, i.e. losing data or mismanaged conflicts.
 - Implemented majority of stretch goals due to smooth management of project.
 - Gained confidence using external libraries and reading documentation.
 - Learned how to use the Bootstrap framework.
@@ -454,9 +454,9 @@ function handleImageUpload(event) {
 
 ## Obstacles Faced and Lessons
 
-- Expereinced difficulty finding ski resort API's that met our needs. We decided to build our own API instead, and pull data that we could from external API's. An approach that I will use going forward.
+- Experienced difficulty finding ski resort API's that met our needs. We decided to build our own API instead and pull data that we could from external API's. An approach that I will use going forward.
 - Had major issues with deployment due to caps locks in our file structure. Learned best practices for setting up file structures and how to deploy going forward.
-- General issues with debugging trickier parts of the code that take a long time to figure out. Overcoming the feeling of lost, and relying on pair-programming and mathodical approach to solving problems.
+- General issues with debugging trickier parts of the code that take a long time to figure out. Overcoming the feeling of lost and relying on pair-programming and methodical approach to solving problems.
 
 ## Future Features
 
