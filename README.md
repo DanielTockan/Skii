@@ -93,7 +93,7 @@ password: admin
 
 ### The API:
 
-Our online search for an existing ski API containing datapoints meeting our criteria was unsuccessful. API's either had expensive licensing fees are were not adequately populated as described. As a result, we decided to build our own within the seed file:
+Our online search for an existing ski API containing datapoints meeting our criteria was unsuccessful. The API's either had expensive licensing fees are were not adequately populated as described. As a result, we decided to build our own within the seed file:
 
 ```js
  {
@@ -174,7 +174,7 @@ const resortsSchema = new mongoose.Schema({
 
 The resorts schema had two fields that required different types of relationships in order to get our desired functionality. 
 
-A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controller's section. A reference relationship was chosen in this instance as the asscociated user (super admins) needed to be able to associate to multiple resort in order to execute CRUD funcitons to them. 
+A relationship was created between the user field and the model, with object level permissions in mind. For particular scenarios within the app, logic was created to ensure that only authorised users would be able to execute CRUD functions - this will be expanded on in the controller's section. A reference relationship was chosen in this instance as the associated user (super admins) needed to be able to associate to multiple resort in order to execute CRUD functions to them. 
 
 Conversely, the comments field applied an embedded relationship with the resorts model. Comments made had to belong to ONLY one resort in order for users to have meaningful interactions about the resorts they loved in one location (the page for that resort) - a key aspect of the app, and the reason behind this choice. This consideration about user interaction was the driving factor for creating a comments schema, rather than just a comments field. Comments need to belong to a user to enhance the social aspect, and users needed to be able to make as many comments as they like. Both aspects are not possible through using a comments field.
 
@@ -412,7 +412,7 @@ The My Account page is the one stop shop for editing personal information, uploa
 
 ![My Account](./resources/screenshots/my_account.png)
 
-The most complex aspect of this page was the integration of the Cloudinary widget to ffacilitate the upload of new images. This was implemented fully in the update your account page: 
+The most complex aspect of this page was the integration of the Cloudinary widget to facilitate the upload of new images. This was implemented fully in the update your account page: 
 
 ![Update Account](./resources/screenshots/update_account.png)
 
