@@ -8,13 +8,13 @@ Skii is a global ski resort application that allows members to be part of an int
 
 This week-long project expanded on my frontend React skills developed for my [Crypto-Index](https://github.com/DanielTockan/Crypto-Index) project, but with an integrated backend using MongoDB and Mongoose as the base technologies. Given that this was a larger group project consisting of 4 people, Git and GitHub were the collaboration and version control tools used for all work. 
 
-I contributed to most aspects of the front-end and back-end, but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the client-side experience throughout the app's components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. 
+I contributed to most aspects of the front-end and back-end but had my own areas of focus - these will be highlighted. Many external libraries were used to enhance the client-side experience throughout the app's components. I implemented the Cloudinary widget library for image uploads for registered users with added crop functionality. 
 
 Upon completion, Skii was deployed using Heroku.
 
 ### Click here to [Skii](https://lets-skii.herokuapp.com/) with us
 
-To enjoy the full experience, you can sign up using the credentials of your choice, OR alternatively use the following:
+To enjoy the full experience, you can sign-up using the credentials of your choice, OR alternatively use the following:
 
 email: admin@admin.com <br>
 password: admin
@@ -292,7 +292,7 @@ The secure route was used across many other routes in our back-end for the follo
 - Creating, updating and deleting comments
 - Adding and removing favourite resorts to a user profile
 
-Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and me.
+Before proceeding to the front-end build, all controllers were tested on the back-end using Insomnia. This was a paired exercise carried out by Kasjan and I.
 
 Making reference to the "modifyUser" function once again, the following test was carried out to ensure that the user level permissions worked as expected.
 
@@ -305,7 +305,7 @@ After installing the React app and all the relevant dependencies, final sign-off
 - Resorts Page
 - Individual Resort Page
 - My Account Page
-- Login and Sign Up Page
+- Login and Sign-Up Page
 
 A combination of the Bootstrap framework and CSS were used for styling, with a monochromatic colour scheme to match the ice white snow theme.
 
@@ -315,7 +315,7 @@ As the first point of contact with the App, I wanted something visually impressi
 
 ![Home page](./resources/screenshots/landing_page.png)
 
-Using the React MapBox GL library, we rendered a map of the world, with markers depicting  the resorts seeded from our database. The longitude and latitude fields present in our resorts model enabled this. React Links were used to send the user to the resort page of marker they clicked on.
+Using the React MapBox GL library, we rendered a map of the world, with markers depicting the resorts seeded from our database. The longitude and latitude fields present in our resorts model enabled this. React Links were used to send the user to the resort page of marker they clicked on.
 
 ```js
 {resorts.map((resort, index) => {
